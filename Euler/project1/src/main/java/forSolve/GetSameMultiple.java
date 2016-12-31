@@ -38,7 +38,7 @@ public class GetSameMultiple {
 
         sameNumber = new ArrayList<Integer>();
         int sameMultiple = getSameMultiple(firstMultipleList, secondMultipleList);
-        
+
 
         for(int i=1; i*sameMultiple < inputNumber; i++) {
             sameNumber.add(i*sameMultiple);

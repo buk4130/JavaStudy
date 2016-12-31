@@ -9,27 +9,41 @@ public class GetSameMultiple {
 
     private ArrayList<Integer> sameNumber;
 
-    public ArrayList<Integer> deleteSameNumber(ArrayList<Integer> firstMultipleList, ArrayList<Integer> secondMultipleList) {
+    protected int getSameMultiple(ArrayList<Integer> firstMultipleList, ArrayList<Integer> secondMultipleList){
 
-        sameNumber = new ArrayList<Integer>();
+        int sameMultiple = 0;
 
-        int forj = 0;
-
-        for(int i=0; i<secondMultipleList.size(); i++){
-            for(int j=forj; j<firstMultipleList.size(); j++){
+        for(int i=0; i<secondMultipleList.size(); i++) {
+            for(int j=0; j<firstMultipleList.size(); j++) {
 
                 if(firstMultipleList.get(j) < secondMultipleList.get(i)){
                     continue;
-                }else if(firstMultipleList.get(j) == secondMultipleList.get(i)){
-                    sameNumber.add(firstMultipleList.get(j));
-                }
-                else {
+                } else if(secondMultipleList.get(i) < firstMultipleList.get(j)){
+                    break;
+                } else if(firstMultipleList.get(j) == secondMultipleList.get(i)){
+                    sameMultiple = firstMultipleList.get(j);
                     break;
                 }
+            }
 
-                forj = j;
+            if (sameMultiple != 0){
+                break;
             }
         }
+
+        return sameMultiple;
+    }
+
+    public ArrayList<Integer> deleteSameNumber(ArrayList<Integer> firstMultipleList, ArrayList<Integer> secondMultipleList, int inputNumber) {
+
+        sameNumber = new ArrayList<Integer>();
+        int sameMultiple = getSameMultiple(firstMultipleList, secondMultipleList);
+        
+
+        for(int i=1; i*sameMultiple < inputNumber; i++) {
+            sameNumber.add(i*sameMultiple);
+        }
+
 
         return sameNumber;
     }

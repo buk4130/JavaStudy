@@ -55,7 +55,7 @@ public class SolveOrder {
 
         sameNumberList = new ArrayList<Integer>();
 
-        sameNumberList = getSameMultiple.deleteSameNumber(firstMultipleList, secondMultipleList);
+        sameNumberList = getSameMultiple.deleteSameNumber(firstMultipleList, secondMultipleList, inputNumber);
 
         int result = sumNumber.getresult(firstMultipleList, secondMultipleList, sameNumberList);
 

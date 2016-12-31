@@ -17,11 +17,11 @@ public class SumNumber {
         }
 
         for(int i=0; i<secondMultipleList.size(); i++){
-            sumSecondMultiple += firstMultipleList.get(i);
+            sumSecondMultiple += secondMultipleList.get(i);
         }
 
         for(int i=0; i<sameNumberList.size(); i++){
-            sumSameNumber += firstMultipleList.get(i);
+            sumSameNumber += sameNumberList.get(i);
         }
 
         int sumResult = 0;

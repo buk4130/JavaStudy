@@ -3,9 +3,15 @@
  */
 public class Franc extends Money{
 
-    Franc(int amount) {
-        this.amount = amount;
+    Franc(int amount, String currency) {
+        super(amount, currency);
     }
 
-    public Money times(int multiplier) { return new Franc(amount * multiplier); }
+    @Override
+    public Money times(int multiplier) { return Money.franc(amount * multiplier); }
+
+    @Override
+    public String currency() {
+        return currency;
+    }
 }

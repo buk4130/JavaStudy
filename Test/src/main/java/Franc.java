@@ -7,7 +7,5 @@ public class Franc extends Money{
         this.amount = amount;
     }
 
-    public Money times(int multiplier) {
-        return new Franc(amount * multiplier);
-    }
+    public Money times(int multiplier) { return new Franc(amount * multiplier); }
 }

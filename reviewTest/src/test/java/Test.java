@@ -1,4 +1,6 @@
 import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertFalse;
+import static org.junit.Assert.assertTrue;
 
 /**
  * Created by seonghohong on 2017. 1. 14..
@@ -12,5 +14,11 @@ public class Test {
         assertEquals(10, product.amount);
         product = five.times(3);
         assertEquals(15, product.amount);
+    }
+
+    @org.junit.Test
+    public void testEquality() {
+        assertTrue(new Dollar(5).equals(new Dollar(5)));
+        assertFalse(new Dollar(5).equals(new Dollar(6)));
     }
 }

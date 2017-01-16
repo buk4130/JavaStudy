@@ -32,4 +32,4 @@
 
 - 통화?
 
-- testFrancMultiplication을 지워야 할까
+- testFrancMultiplication 제거

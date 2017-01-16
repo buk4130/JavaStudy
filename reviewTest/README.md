@@ -30,6 +30,6 @@
 
 - ~~Franc과 Dollar 비교하기~~
 
-- 통화?
+- ~~통화?~~
 
 - testFrancMultiplication 제거
